@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # Ensure that innodb_file_per_table is on if we're using MySQL 5.5.
-[[ $OPENSHIFT_MYSQL_IDENT == *5.5* ]] && mysql -e "SET GLOBAL innodb_file_per_table = On;"
+[[ $OPENSHIFT_MYSQL_IDENT == *5.5* ]] && mysql -h $OPENSHIFT_MYSQL_DB_HOST -u $OPENSHIFT_MYSQL_DB_USERNAME -p $OPENSHIFT_MYSQL_DB_PASSWORD -e "SET GLOBAL innodb_file_per_table = On;"
