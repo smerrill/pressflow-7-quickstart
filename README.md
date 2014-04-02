@@ -9,11 +9,11 @@ git remote add -f drupal https://github.com/pressflow/7.git
 git subtree add --prefix php drupal pressflow-7.23 --squash
 ```
 
-When a new Drupal version (like 7.24) comes out, you should be able to upgrade it with the following command:
+When a new Drupal version (like 7.26) comes out, you should be able to upgrade it with the following command:
 
 ```
 git remote add -f drupal https://github.com/pressflow/7.git
-git subtree add --prefix php drupal pressflow-7.24 --squash
+git subtree merge --prefix=php pressflow-7.26 --squash
 ```
 
 ### Creating an app
