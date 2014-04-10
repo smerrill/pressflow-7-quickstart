@@ -18,6 +18,10 @@ git subtree merge --prefix=php pressflow-7.26 --squash
 
 ### Creating an app
 
-Note: this won't work in one shot currently. Some order-of-operations things need to be worked out with the environmental variables.
+If you are using OpenShift Online, do the following:
 
-`rhc app-create drupal php-5 mysql-5 cron https://cartreflect-claytondev.rhcloud.com/reflect?github=smerrill/openshift-community-pressflow7 --from-code=https://github.com/smerrill/pressflow-7-quickstart.git`
+`rhc app-create drupal php-5.3 mysql-5.5 cron https://cartreflect-claytondev.rhcloud.com/reflect?github=smerrill/openshift-community-pressflow7 --from-code=https://github.com/smerrill/pressflow-7-quickstart.git`
+
+If you are using OpenShift Origin or Enterprise, do the following:
+
+`rhc app-create drupal php-5.3 mysql-5.1 cron https://cartreflect-claytondev.rhcloud.com/reflect?github=smerrill/openshift-community-pressflow7 --from-code=https://github.com/smerrill/pressflow-7-quickstart.git`
